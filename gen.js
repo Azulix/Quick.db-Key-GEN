@@ -1,5 +1,3 @@
-const Discord = require('discord.js')
-config = require('../../config.json')
 const db = require("quick.db")
 const code = require('@codedipper/random-code')
 
