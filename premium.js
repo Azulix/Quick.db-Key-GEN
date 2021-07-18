@@ -1,0 +1,23 @@
+const Discord = require('discord.js')
+config = require('../../config.json')
+const db = require("quick.db")
+const code = require('@codedipper/random-code')
+
+module.exports = {
+
+    run: async (client, message, args) => {
+
+        let générateur = code(20).toLowerCase()
+
+        db.set(`premium_subs${générateur}`, client.user.id)
+        message.channel.send(`Le clé premium a été générée avec succès ! \`${générateur}\``)
+
+
+
+    },
+
+    name: 'premium-gen'
+
+}
+
+
